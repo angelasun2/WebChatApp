@@ -4,8 +4,9 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const Message = require('./models/message');
 const socket = require('socket.io');
+const path = require('path');
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 // Assign the value of your mongoDB connection string to this constant
 const dbConnectString = "mongodb+srv://asun2:bunnies0629@cluster0-rej85.mongodb.net/test?retryWrites=true";
